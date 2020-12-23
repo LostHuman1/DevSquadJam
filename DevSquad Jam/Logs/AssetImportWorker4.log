@@ -86,3 +86,28 @@ Received Import Request.
 Start importing Assets/Materials/Trail Mat.mat using Guid(c57022212bed04546a994fd8c650d262) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74b26228a9c6fb6a32f9bdacd5faaf62') in 1.394231 seconds
   Import took 1.397254 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001330 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.106 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.80 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1072 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 59.8 MB.
+System memory in use after: 59.9 MB.
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 1562.
+Total: 4.690400 ms (FindLiveObjects: 0.224400 ms CreateObjectMapping: 0.067100 ms MarkObjects: 4.293900 ms  DeleteObjects: 0.101700 ms)
+
