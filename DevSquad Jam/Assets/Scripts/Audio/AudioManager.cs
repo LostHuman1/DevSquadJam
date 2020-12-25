@@ -29,6 +29,7 @@ public class AudioManager : MonoBehaviour
 	private void Awake()
 	{
 		SFXEventChannel.OnAudioCueRequested += PlayAudioCue;
+		musicEventChannel.OnAudioCueRequested += PlayAudioCue;
 		DontDestroyOnLoad(this.gameObject);
 	}
 
@@ -37,7 +38,7 @@ public class AudioManager : MonoBehaviour
 		if (Application.isPlaying)
 		{
 			SetGroupVolume("MasterVolume", masterVolume);
-			SetGroupVolume("MusicVolume", musicVolume);
+			SetGroupVolume("BGMVolume", musicVolume);
 			SetGroupVolume("SFXVolume", sfxVolume);
 		}
 	}
@@ -67,7 +68,7 @@ public class AudioManager : MonoBehaviour
 	}
 	private float NormalizedToMixerValue(float normalizedValue)
 	{
-		return (normalizedValue - 1f) * 80f;
+		return Mathf.Log10(normalizedValue) * 20;
 	}
 	/// <summary>
 	///  Plays an AudioCue by requesting the appropriate number of SoundEmitters from the pool.
