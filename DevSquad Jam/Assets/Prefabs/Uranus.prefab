@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1342287247048729710}
   - component: {fileID: 1342287247048729711}
   - component: {fileID: 1342287247048729699}
-  - component: {fileID: 1342287247048729696}
+  - component: {fileID: 4771052446831984028}
   m_Layer: 0
   m_Name: Uranus
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1342287247048729708}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.01, y: 0.39263034, z: 3.2049334}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   orbitSpeed: 10
---- !u!135 &1342287247048729696
-SphereCollider:
+--- !u!64 &4771052446831984028
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,6 +108,7 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.030852
-  m_Center: {x: 0.0147432685, y: 0.0068668127, z: -0.003281951}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 6142923316010919061, guid: e248de71fd36ca44280c652ab326d079, type: 3}

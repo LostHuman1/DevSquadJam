@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1280454151291641119}
   - component: {fileID: 1280454151291641116}
   - component: {fileID: 1280454151291641088}
-  - component: {fileID: 1280454151291641089}
+  - component: {fileID: 3889992829159881647}
   m_Layer: 0
   m_Name: Neptune
   m_TagString: Untagged
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   orbitSpeed: 10
---- !u!135 &1280454151291641089
-SphereCollider:
+--- !u!64 &3889992829159881647
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,6 +108,7 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.0087416
-  m_Center: {x: -0.011745185, y: -0.014261812, z: -0.013935477}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8806919479351626728, guid: e248de71fd36ca44280c652ab326d079, type: 3}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5858214223622941091}
   - component: {fileID: 5858214223622941100}
   - component: {fileID: 5858214223622941088}
-  - component: {fileID: 5858214223622941089}
+  - component: {fileID: 2635624446815434141}
   m_Layer: 0
   m_Name: Jupiter
   m_TagString: Untagged
@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 5858214223622941101}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.6504161, y: 0.39263034, z: 6.08}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -98,8 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 10
   orbitSpeed: 10
---- !u!135 &5858214223622941089
-SphereCollider:
+--- !u!64 &2635624446815434141
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -108,6 +108,7 @@ SphereCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.0382552
-  m_Center: {x: -0.0055168867, y: -0.030928433, z: 0.018482834}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2384782780456473445, guid: e248de71fd36ca44280c652ab326d079, type: 3}
