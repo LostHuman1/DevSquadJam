@@ -1032,7 +1032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8898828228342117844, guid: 49be402f7153f51478652312927c5f90, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8898828228342117844, guid: 49be402f7153f51478652312927c5f90, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1395,7 +1395,6 @@ MonoBehaviour:
   settings: {fileID: 1130999510}
   credits: {fileID: 1371607951}
   audioManager: {fileID: 562241477}
-  SFXAudiocue: {fileID: 0}
 --- !u!82 &704904820
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1403,9 +1402,9 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 704904814}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -6289856318428656872, guid: 4fc796c49e42da74ab307cce1dc55383, type: 2}
+  OutputAudioMixerGroup: {fileID: 352061783745669865, guid: 4fc796c49e42da74ab307cce1dc55383, type: 2}
   m_audioClip: {fileID: 8300000, guid: 10b509ac21374d84bbc3dc1d03fba570, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
@@ -3451,53 +3450,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1624693442}
   m_CullTransparentMesh: 1
---- !u!1 &1848460410
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1848460412}
-  - component: {fileID: 1848460411}
-  m_Layer: 0
-  m_Name: MenuBGM
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &1848460411
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848460410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 224bfb91e4adc444497141926fbf4117, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  audioCue: {fileID: 11400000, guid: a257c9388850db54488e8c83743a9412, type: 2}
-  playOnStart: 1
-  audioCueEventChannel: {fileID: 11400000, guid: ab3966c036444744989e2f1b050d8196, type: 2}
-  audioConfiguration: {fileID: 11400000, guid: 58983e352a695df49a3074881ba7f9dd, type: 2}
---- !u!4 &1848460412
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1848460410}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1895682512
 GameObject:
   m_ObjectHideFlags: 0
