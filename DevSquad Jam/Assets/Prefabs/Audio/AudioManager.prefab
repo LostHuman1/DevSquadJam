@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   factory: {fileID: 11400000, guid: 04c5ef6f994979e40b2727f4881d6727, type: 2}
-  pool: {fileID: 11400000, guid: ed0217ea63a725946b6fa8238dca0655, type: 2}
+  pool: {fileID: 11400000, guid: 14ce50ff9a9155c44830110220d4d5cc, type: 2}
   initialSize: 10
   SFXEventChannel: {fileID: 11400000, guid: f622c2eeb6ef60e49b61ff1ffdf86e0e, type: 2}
   musicEventChannel: {fileID: 11400000, guid: ab3966c036444744989e2f1b050d8196, type: 2}

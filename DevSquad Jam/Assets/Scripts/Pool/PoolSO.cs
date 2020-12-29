@@ -29,7 +29,7 @@ public abstract class PoolSO<T> : ScriptableObject, IPool<T>
     {
         if (HasBeenPrewarmed)
         {
-            Debug.LogWarning($"Pool {name} has alreaady been prewarmed.");
+            Debug.LogWarning($"Pool {name} has already been prewarmed.");
             return;
         }
         for (int i = 0; i < num; i++)

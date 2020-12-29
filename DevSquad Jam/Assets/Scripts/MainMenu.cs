@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public GameObject settings;
     public GameObject credits;
-
+    public AudioManager audioManager;
     public void Settings()
     {
         if (!settings.activeInHierarchy)
@@ -33,7 +33,14 @@ public class MainMenu : MonoBehaviour
             credits.SetActive(false);
         }
     }
-
+    public void BGMVolumeSetting(float volume)
+    {
+        audioManager.SetGroupVolume("BGMVolume",volume);
+    }
+    public void SFXVolumeSetting(float volume)
+    {
+        audioManager.SetGroupVolume("SFXVolume",volume);
+    }
     public void Play()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

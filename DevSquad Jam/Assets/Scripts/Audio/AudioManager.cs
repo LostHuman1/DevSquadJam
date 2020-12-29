@@ -30,7 +30,9 @@ public class AudioManager : MonoBehaviour
 	{
 		SFXEventChannel.OnAudioCueRequested += PlayAudioCue;
 		musicEventChannel.OnAudioCueRequested += PlayAudioCue;
-		DontDestroyOnLoad(this.gameObject);
+		pool.Prewarm(initialSize);
+		pool.SetParent(this.transform);
+		//DontDestroyOnLoad(this.gameObject);
 	}
 
 	private void OnValidate()
@@ -68,7 +70,8 @@ public class AudioManager : MonoBehaviour
 	}
 	private float NormalizedToMixerValue(float normalizedValue)
 	{
-		return Mathf.Log10(normalizedValue) * 20;
+		// the range [0 to 1] becomes [-80dB to 0dB]
+		return Mathf.Lerp(-80f,0f,normalizedValue);
 	}
 	/// <summary>
 	///  Plays an AudioCue by requesting the appropriate number of SoundEmitters from the pool.

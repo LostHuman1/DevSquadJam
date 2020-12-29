@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00941fa24f746eb49a0a529d1ce0ff3e, type: 3}
-  m_Name: BGM Configuration SO
+  m_Name: SFX Configuration SO
   m_EditorClassIdentifier: 
-  OutputAudioMixerGroup: {fileID: -6289856318428656872, guid: 4fc796c49e42da74ab307cce1dc55383, type: 2}
+  OutputAudioMixerGroup: {fileID: 8856443657679289029, guid: 4fc796c49e42da74ab307cce1dc55383, type: 2}
   _priorityLevel: 128
   Mute: 0
   Volume: 1
@@ -28,5 +28,5 @@ MonoBehaviour:
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
-  IgnoreListenerVolume: 1
+  IgnoreListenerVolume: 0
   IgnoreListenerPause: 0
