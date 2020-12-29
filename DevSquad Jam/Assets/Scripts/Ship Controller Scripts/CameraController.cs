@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CameraControll : MonoBehaviour
+public class CameraController : MonoBehaviour
 {
     [SerializeField] private int speed = 1;
     Vector2Int screen;
