@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2679c5a62b6874f41a1b6cf419a70553, type: 3}
-  m_Name: Mars
+  m_Name: Pluto 2
   m_EditorClassIdentifier: 
-  objectiveName: Mars
-  description: 
+  objectiveName: Pluto
+  description: Decide whether it's a planet or not
   fuel: 0
   gold: 0
