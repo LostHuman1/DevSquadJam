@@ -8,6 +8,7 @@ public class MainMenu : MonoBehaviour
     public GameObject settings;
     public GameObject credits;
     public AudioManager audioManager;
+    public AudioCue audioCue;
     public void Settings()
     {
         if (!settings.activeInHierarchy)
@@ -32,6 +33,10 @@ public class MainMenu : MonoBehaviour
         {
             credits.SetActive(false);
         }
+    }
+    public void PlayButtonSound()
+    {
+        audioCue.PlayAudioCue();
     }
     public void BGMVolumeSetting(float volume)
     {
