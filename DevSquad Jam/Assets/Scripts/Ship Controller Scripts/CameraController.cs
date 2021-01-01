@@ -19,11 +19,11 @@ public class CameraController : MonoBehaviour
         bool mouseValid = (mp.x <= screen.x * 1.05f && mp.x >= screen.x * -0.05f);
         if (!mouseValid)
             return;
-        if (mp.x > screen.x * 0.90f)
+        if (mp.x > screen.x * 0.95f)
         {
             transform.Rotate(new Vector3(0, -1, 0) * Time.deltaTime * speed);
         }
-        else if (mp.x < screen.x * 0.10f)
+        else if (mp.x < screen.x * 0.05f)
         {
             transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * speed);
         }
