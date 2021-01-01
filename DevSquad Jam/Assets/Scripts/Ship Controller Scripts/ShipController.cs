@@ -13,6 +13,11 @@ public class ShipController : MonoBehaviour
     public float mouseSensitivity;
     public float upDownSpeed;
 
+    public float orbitSpeed = 10.0f;
+
+    public bool orbit;
+    public Vector3 orbitCentre; 
+
     private void Update()
     {
         xInput = Input.GetAxis("Horizontal");
@@ -24,5 +29,10 @@ public class ShipController : MonoBehaviour
         transform.position += transform.right * moveSpeed * Time.deltaTime * xInput;
         transform.Rotate(Vector3.up * xMouseInput * mouseSensitivity * Time.deltaTime);
         transform.Rotate(Vector3.right * yMouseInput * mouseSensitivity * Time.deltaTime);
+
+        if (orbit)
+        {
+            transform.RotateAround(orbitCentre, Vector3.up, orbitSpeed * Time.deltaTime);
+        }
     }
 }
