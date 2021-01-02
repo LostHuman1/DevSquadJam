@@ -580,9 +580,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6b9e4bedebe6474f836e73b6d9b8362, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  planets:
+  - {fileID: 47489763}
+  - {fileID: 1752091567}
+  - {fileID: 861389458}
+  - {fileID: 975650419}
+  - {fileID: 468887571}
+  - {fileID: 467170320}
+  - {fileID: 1848906992}
+  - {fileID: 262015944}
+  - {fileID: 639220315}
   targetPlanet: {fileID: 146105982}
-  orbitSpeed: 30
   orbit: 0
+  orbitSpeed: 30
   maxFuel: 1000
   currentFuel: 1000
 --- !u!4 &115495702 stripped
