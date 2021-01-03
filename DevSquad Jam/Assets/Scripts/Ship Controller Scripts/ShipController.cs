@@ -47,6 +47,8 @@ public class ShipController : MonoBehaviour
 
     private void Update()
     {
+
+        //Ship Move
         if (!orbit)
         {
             transform.position = new Vector3(Mathf.Lerp(transform.position.x, targetPlanet.position.x + offset, percentage), 0, Mathf.Lerp(transform.position.z, targetPlanet.position.z, percentage));
@@ -95,7 +97,7 @@ public class ShipController : MonoBehaviour
         float distance = Vector3.Distance(target.position, transform.position);
         if(distance > currentFuel)
         {
-            Debug.Log("NOT ENOUGH FUEL!");
+            gui.SetErrorText("NOT ENOUGH FUEL");
             return false;
         }
         currentFuel -= distance;
@@ -115,7 +117,7 @@ public class ShipController : MonoBehaviour
                 }
             }
         }
-        Debug.Log("TARGET NOT VALID");
+        gui.SetErrorText("TARGET NOT VALID");
         return false;
     }
 
