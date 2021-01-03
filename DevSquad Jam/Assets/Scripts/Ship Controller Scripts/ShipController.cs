@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShipController : MonoBehaviour
 {
     public Planet[] planets;
+    public TaskSystem taskSystem;
     //mercury   0
     //venus     1
     //earth     2
@@ -37,7 +38,7 @@ public class ShipController : MonoBehaviour
         transform.parent = targetPlanet;
         for (int i = 0; i <= 8; i++)
         {
-            if(targetPlanet.GetComponent<Planet>() == planets[i])
+            if (targetPlanet.GetComponent<Planet>() == planets[i])
             {
                 currentPlanet = i;
             }
@@ -47,7 +48,6 @@ public class ShipController : MonoBehaviour
 
     private void Update()
     {
-
         //Ship Move
         if (!orbit)
         {
@@ -88,7 +88,7 @@ public class ShipController : MonoBehaviour
                 transform.parent = target;
                 trailRenderer.enabled = true;
                 transform.localScale = new Vector3(0.2f / target.localScale.x, 0.2f / target.localScale.y, 0.2f / target.localScale.z);
-            }   
+            }  
         }   
     }
 
@@ -118,6 +118,16 @@ public class ShipController : MonoBehaviour
             }
         }
         gui.SetErrorText("TARGET NOT VALID");
+        return false;
+    }
+
+    public bool CheckTask()
+    {
+        if(taskSystem.nowTask.objectiveName == targetPlanet.GetComponent<Planet>().name)
+        {
+            currentFuel += taskSystem.nowTask.fuel;
+            return true;
+        }
         return false;
     }
 

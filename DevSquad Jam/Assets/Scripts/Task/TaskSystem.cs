@@ -6,7 +6,7 @@ public class TaskSystem : MonoBehaviour
 {
     public enum Planets
     {
-        GENERIC,
+        //GENERIC,
         MERCURY,
         VENUS,
         EARTH,
@@ -28,50 +28,74 @@ public class TaskSystem : MonoBehaviour
     public TextMeshProUGUI objectiveText;
     public TextMeshProUGUI descriptionText;
     public TextMeshProUGUI fuelText;
-    public TextMeshProUGUI goldText;
+    //public TextMeshProUGUI goldText;
     
+    public int allTask;
+   
     private int randomTask;
     private int randomPlanet;
-    public TaskSO previousTask;
     private Planets previousPlanet;
     public TaskSO nowTask;
     private Planets nowPlanet;
-    public List<TaskSO> doneTask = new List<TaskSO>();
+    public List<TaskSO> taskSOCheckList = new List<TaskSO>();
+
+    public bool isCompleteAll = false;
     private void Start()
     {
         previousPlanet = (Planets)Random.Range(0, tasks.Length);
-        randomTask  = Random.Range(0, tasks[(int)previousPlanet].tasks.Length);
-        previousTask = tasks[(int)previousPlanet].tasks[randomTask];
-        SetRandomTaskWindow(previousTask);
+        while(previousPlanet == Planets.EARTH)
+        {
+            previousPlanet = (Planets)Random.Range(0, tasks.Length);
+        }
+        nowTask = tasks[(int)previousPlanet].tasks[randomTask];
+        SetRandomTaskWindow(nowTask);
+        for (int y = 0; y < tasks.Length; y++)
+        {
+            for(int x = 0; x< tasks[y].tasks.Length; x++)
+            {
+                allTask++;
+            }
+        }
     }
     public void SetRandomTaskWindow(TaskSO task)
     {
+        
         objectiveText.text = task.objectiveName;
         descriptionText.text = "  " + task.description;
         fuelText.text = task.fuel.ToString();
-        goldText.text = task.gold.ToString();
+        //goldText.text = task.gold.ToString();
         previousPlanet = (Planets)randomPlanet;
-        previousTask = task;
-        nowTask = previousTask;
-        doneTask.Add(task);
+        taskSOCheckList.Add(task);
     }
     public void RandomTaskSO()
     {
-        RandomPlanet();
-        while (nowTask == previousTask && doneTask.Contains(nowTask))
+        if(taskSOCheckList.Count >= allTask)
+        {
+            isCompleteAll = true;
+            return;
+        }
+        int i = 0;
+        while (nowPlanet == previousPlanet)
+        {
+            RandomPlanet();
+        }
+        while (taskSOCheckList.Contains(nowTask))
         {
             randomTask = Random.Range(0, tasks[randomPlanet].tasks.Length);
             nowTask = tasks[randomPlanet].tasks[randomTask];
+            if(i > tasks[randomPlanet].tasks.Length - 1)
+            {
+                RandomPlanet();
+            }
+            i++;
         }
         SetRandomTaskWindow(nowTask);
     }
 
     public void RandomPlanet()
     {
-        while (nowPlanet == previousPlanet && tasks.Length != 0)
-        {
-            randomPlanet = Random.Range(0, tasks.Length);
-            nowPlanet = tasks[randomPlanet].planet;
-        }
+        randomPlanet = Random.Range(0, tasks.Length);
+        nowPlanet = tasks[randomPlanet].planet;
+        
     }
 }

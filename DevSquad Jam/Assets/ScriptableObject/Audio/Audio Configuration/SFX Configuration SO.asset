@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00941fa24f746eb49a0a529d1ce0ff3e, type: 3}
   m_Name: SFX Configuration SO
   m_EditorClassIdentifier: 
-  OutputAudioMixerGroup: {fileID: 8856443657679289029, guid: 4fc796c49e42da74ab307cce1dc55383, type: 2}
+  OutputAudioMixerGroup: {fileID: 6908601458188150643, guid: 4fc796c49e42da74ab307cce1dc55383, type: 2}
   _priorityLevel: 128
   Mute: 0
   Volume: 1

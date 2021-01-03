@@ -25,7 +25,13 @@ public class Planet : MonoBehaviour
                 if (shipController.targetPlanet != this.transform)
                 {
                     if (Input.GetMouseButtonDown(0))
+                    {
                         shipController.SetTrarget(this.transform);
+                        if (shipController.CheckTask())
+                        {
+                            shipController.taskSystem.RandomTaskSO();
+                        }
+                    }
                 }
                 else
                 {

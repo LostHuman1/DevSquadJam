@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00941fa24f746eb49a0a529d1ce0ff3e, type: 3}
   m_Name: BGM Configuration SO
   m_EditorClassIdentifier: 
-  OutputAudioMixerGroup: {fileID: -6289856318428656872, guid: 4fc796c49e42da74ab307cce1dc55383, type: 2}
+  OutputAudioMixerGroup: {fileID: 352061783745669865, guid: 4fc796c49e42da74ab307cce1dc55383, type: 2}
   _priorityLevel: 128
   Mute: 0
   Volume: 1
@@ -20,7 +20,7 @@ MonoBehaviour:
   PanStereo: 0
   ReverbZoneMix: 1
   SpatialBlend: 1
-  RolloffMode: 0
+  RolloffMode: 1
   MinDistance: 1
   MaxDistance: 500
   Spread: 0
