@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveName: Neptune
   description: Check there's not much going on, as usual
-  fuel: 0
-  gold: 0
+  fuel: 100
+  gold: 500

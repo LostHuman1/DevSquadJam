@@ -16,5 +16,5 @@ MonoBehaviour:
   description: 'Admire the landscape
 
 '
-  fuel: 0
-  gold: 0
+  fuel: 100
+  gold: 500

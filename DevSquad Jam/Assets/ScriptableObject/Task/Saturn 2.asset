@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveName: Saturn
   description: Measure ring thickness
-  fuel: 0
-  gold: 0
+  fuel: 100
+  gold: 500

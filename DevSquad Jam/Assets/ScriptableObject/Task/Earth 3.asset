@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveName: Earth
   description: Communicate updates to the NASA
-  fuel: 0
-  gold: 0
+  fuel: 100
+  gold: 500

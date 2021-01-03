@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveName: Jupiter
   description: Measure storms
-  fuel: 0
-  gold: 0
+  fuel: 100
+  gold: 500

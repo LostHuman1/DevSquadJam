@@ -28,7 +28,7 @@ public class TaskSystem : MonoBehaviour
     public TextMeshProUGUI objectiveText;
     public TextMeshProUGUI descriptionText;
     public TextMeshProUGUI fuelText;
-    //public TextMeshProUGUI goldText;
+    public TextMeshProUGUI goldText;
     
     public int allTask;
    
@@ -63,7 +63,7 @@ public class TaskSystem : MonoBehaviour
         objectiveText.text = task.objectiveName;
         descriptionText.text = "  " + task.description;
         fuelText.text = task.fuel.ToString();
-        //goldText.text = task.gold.ToString();
+        goldText.text = task.gold.ToString();
         previousPlanet = (Planets)randomPlanet;
         taskSOCheckList.Add(task);
     }

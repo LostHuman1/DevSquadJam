@@ -126,6 +126,7 @@ public class ShipController : MonoBehaviour
         if(taskSystem.nowTask.objectiveName == targetPlanet.GetComponent<Planet>().name)
         {
             currentFuel += taskSystem.nowTask.fuel;
+            gui.AddGold(taskSystem.nowTask.gold);
             return true;
         }
         return false;

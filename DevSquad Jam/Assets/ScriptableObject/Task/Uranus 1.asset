@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveName: Uranus
   description: Wonder why nobody talks about Uranus ring
-  fuel: 0
-  gold: 0
+  fuel: 100
+  gold: 500

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveName: Venus
   description: Use atmosphere to benchmark saunas
-  fuel: 0
-  gold: 0
+  fuel: 100
+  gold: 500

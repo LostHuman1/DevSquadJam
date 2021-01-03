@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveName: Earth
   description: Collect cargo
-  fuel: 0
-  gold: 0
+  fuel: 100
+  gold: 500

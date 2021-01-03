@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectiveName: Earth
   description: Steal Wi-Fi to download *Game name*
-  fuel: 10
-  gold: 10
+  fuel: 100
+  gold: 500
