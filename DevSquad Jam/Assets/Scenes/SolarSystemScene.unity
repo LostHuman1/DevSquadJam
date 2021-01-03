@@ -1400,6 +1400,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1512915181}
         m_TargetAssemblyTypeName: GUI, Assembly-CSharp
+        m_MethodName: PlayButtonSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1512915181}
+        m_TargetAssemblyTypeName: GUI, Assembly-CSharp
         m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
@@ -1801,6 +1813,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 420840033}
   m_CullTransparentMesh: 1
+--- !u!114 &466339067 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2265164508870866766, guid: 6a0c93217cb35bc488b4b3a3659e4fa2, type: 3}
+  m_PrefabInstance: {fileID: 741103453}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 224bfb91e4adc444497141926fbf4117, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &467170319 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3304790453572278761, guid: b809978a6124de3459439648d4801661, type: 3}
@@ -2059,6 +2082,17 @@ TrailRenderer:
   m_MinVertexDistance: 1
   m_Autodestruct: 0
   m_Emitting: 1
+--- !u!114 &485230548 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8898828228342117843, guid: 49be402f7153f51478652312927c5f90, type: 3}
+  m_PrefabInstance: {fileID: 883681964}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aac97f07e5b17044ca3e80d58af5eb69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &530882287
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2226,7 +2260,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1512915181}
+        m_TargetAssemblyTypeName: GUI, Assembly-CSharp
+        m_MethodName: SetSFXVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &629791858
 GameObject:
   m_ObjectHideFlags: 0
@@ -2638,6 +2684,10 @@ PrefabInstance:
     - target: {fileID: 2265164508870866761, guid: 6a0c93217cb35bc488b4b3a3659e4fa2, type: 3}
       propertyPath: m_Name
       value: ButtonSFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 2265164508870866766, guid: 6a0c93217cb35bc488b4b3a3659e4fa2, type: 3}
+      propertyPath: playOnStart
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2265164508870866767, guid: 6a0c93217cb35bc488b4b3a3659e4fa2, type: 3}
       propertyPath: m_RootOrder
@@ -4122,6 +4172,8 @@ MonoBehaviour:
   planetNameText: {fileID: 1892995460}
   pauseMenu: {fileID: 1132793644}
   isGamePause: 0
+  buttonAudioCue: {fileID: 466339067}
+  audioManager: {fileID: 485230548}
 --- !u!114 &1512915182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4294,7 +4346,19 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1512915181}
+        m_TargetAssemblyTypeName: GUI, Assembly-CSharp
+        m_MethodName: SetMusicVolume
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1735813800
 GameObject:
   m_ObjectHideFlags: 0
@@ -4816,6 +4880,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1512915181}
+        m_TargetAssemblyTypeName: GUI, Assembly-CSharp
+        m_MethodName: PlayButtonSFX
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1512915181}
         m_TargetAssemblyTypeName: GUI, Assembly-CSharp
         m_MethodName: LoadMenu
@@ -6201,60 +6277,3 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 3889992829159881647, guid: adbcd3aa9e7523d4e84e3f11e1467ce1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: adbcd3aa9e7523d4e84e3f11e1467ce1, type: 3}
---- !u!1001 &8046501611876926565
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8046501611428091897, guid: 9d7f3b7c668d109469cae8e2bea70209, type: 3}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8046501611428091897, guid: 9d7f3b7c668d109469cae8e2bea70209, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8046501611428091897, guid: 9d7f3b7c668d109469cae8e2bea70209, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8046501611428091897, guid: 9d7f3b7c668d109469cae8e2bea70209, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8046501611428091897, guid: 9d7f3b7c668d109469cae8e2bea70209, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8046501611428091897, guid: 9d7f3b7c668d109469cae8e2bea70209, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8046501611428091897, guid: 9d7f3b7c668d109469cae8e2bea70209, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8046501611428091897, guid: 9d7f3b7c668d109469cae8e2bea70209, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8046501611428091897, guid: 9d7f3b7c668d109469cae8e2bea70209, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8046501611428091897, guid: 9d7f3b7c668d109469cae8e2bea70209, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8046501611428091897, guid: 9d7f3b7c668d109469cae8e2bea70209, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8046501611428091902, guid: 9d7f3b7c668d109469cae8e2bea70209, type: 3}
-      propertyPath: m_Name
-      value: AdjustAudio
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 9d7f3b7c668d109469cae8e2bea70209, type: 3}
