@@ -8,29 +8,11 @@ public class GUI : MonoBehaviour
     private ShipController shipController;
 
 
-    public float gold = 100;
+    //public float credits;
 
 
     public float fuel;
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    [HideInInspector]public float newFuel;
-    float newGold = 100f;
-    [SerializeField] TMPro.TMP_Text goldText;
-=======
     [HideInInspector] public float newFuel;
->>>>>>> d6a6430a4da4524095268556c051a0fec54740bb
-=======
-    [HideInInspector] public float newFuel;
->>>>>>> d6a6430a4da4524095268556c051a0fec54740bb
-=======
-    [HideInInspector] public float newFuel;
->>>>>>> d6a6430a4da4524095268556c051a0fec54740bb
-=======
-    [HideInInspector] public float newFuel;
->>>>>>> d6a6430a4da4524095268556c051a0fec54740bb
     [SerializeField] TMPro.TMP_Text fuelText;
     public TMPro.TMP_Text errorText;
     float errorTime = 0f;
@@ -50,7 +32,6 @@ public class GUI : MonoBehaviour
         fuelText.text = "FUEL: " + fuel.ToString("0.00");
         planetNameText.text = "";
         errorText.text = "";
-        goldText.text = "GOLD: " + gold.ToString();
     }
 
     void Update()
@@ -86,10 +67,6 @@ public class GUI : MonoBehaviour
         {
             errorText.text = "";
         }
-
-
-        gold = Mathf.Lerp(gold, newGold, 5 * Time.deltaTime);
-        goldText.text = "GOLD: " + gold.ToString("0");
     }
 
     public void Resume()
@@ -128,10 +105,5 @@ public class GUI : MonoBehaviour
     {
         errorText.text = text;
         errorTime = 0f;
-    }
-
-    public void AddGold(float value)
-    {
-        newGold += value;
     }
 }
