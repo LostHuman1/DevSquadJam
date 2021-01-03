@@ -8,12 +8,13 @@ public class GUI : MonoBehaviour
     private ShipController shipController;
 
 
-    //public float credits;
-
+    public float gold = 500f;
+    float newGold = 500f;
 
     public float fuel;
     [HideInInspector] public float newFuel;
     [SerializeField] TMPro.TMP_Text fuelText;
+    [SerializeField] TMPro.TMP_Text goldText;
     public TMPro.TMP_Text errorText;
     float errorTime = 0f;
     public TMPro.TMP_Text planetNameText;
@@ -32,6 +33,7 @@ public class GUI : MonoBehaviour
         fuelText.text = "FUEL: " + fuel.ToString("0.00");
         planetNameText.text = "";
         errorText.text = "";
+        goldText.text = "GOLD: " + gold.ToString("0");
     }
 
     void Update()
@@ -47,6 +49,9 @@ public class GUI : MonoBehaviour
         {
             fuelText.color = Color.white;
         }
+
+        gold = Mathf.Lerp(gold, newGold, 5 * Time.deltaTime);
+        goldText.text = "GOLD: " + gold.ToString("0");
 
         //Pause
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -105,5 +110,10 @@ public class GUI : MonoBehaviour
     {
         errorText.text = text;
         errorTime = 0f;
+    }
+
+    public void AddGold(float value)
+    {
+        newGold += value;
     }
 }
