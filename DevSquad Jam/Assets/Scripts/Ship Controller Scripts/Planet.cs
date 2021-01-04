@@ -6,6 +6,7 @@ public class Planet : MonoBehaviour
 {
     private ShipController shipController;
     private GUI gui;
+    public GameObject highLight;
 
     public float orbitDistance;
 
@@ -37,6 +38,15 @@ public class Planet : MonoBehaviour
                 {
                     gui.SetErrorText("TARGET NOT VALID");
                 }
+
+        if (shipController.CheckPosition(this))
+        {
+            highLight.SetActive(true);
+        }
+        else
+        {
+            highLight.SetActive(false);
+        }
 
     }
 

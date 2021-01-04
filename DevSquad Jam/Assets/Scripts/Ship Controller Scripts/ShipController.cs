@@ -20,7 +20,7 @@ public class ShipController : MonoBehaviour
     public Transform targetPlanet;
     [HideInInspector] public bool orbit = false;
     float percentage = 0f;
-    float offset;
+    float offset = 2f;
     [SerializeField] float orbitSpeed = 20.0f;
 
     GUI gui;
@@ -69,11 +69,11 @@ public class ShipController : MonoBehaviour
         }
 
         
-        //if (orbit)
-        //{
-        //    transform.RotateAround(targetPlanet.position, Vector3.up, orbitSpeed * Time.deltaTime);
-        //    transform.rotation = Quaternion.Euler(0, targetPlanet.rotation.y, 0);
-        //}
+        if (orbit)
+        {
+            transform.RotateAround(targetPlanet.position, Vector3.up, orbitSpeed * Time.deltaTime);
+            transform.rotation = Quaternion.Euler(0, targetPlanet.rotation.y, 0);
+        }
     }
 
     public void SetTrarget(Transform target)
@@ -105,7 +105,7 @@ public class ShipController : MonoBehaviour
         return true;
     }
 
-    bool CheckPosition(Planet target)
+    public bool CheckPosition(Planet target)
     {
         for (int i = 0; i <= 8; i++)
         {
@@ -131,5 +131,7 @@ public class ShipController : MonoBehaviour
         }
         return false;
     }
+
+   
 
 }

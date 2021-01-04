@@ -25,7 +25,7 @@ public class CameraController : MonoBehaviour
         }
         else if (mp.x < screen.x * 0.05f)
         {
-            transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * speed);
+            transform.Rotate(new Vector3(0, 1, 0) * Time.deltaTime * speed * 1.7f);
         }
     }
 }
