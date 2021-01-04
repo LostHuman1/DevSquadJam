@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class ShipController : MonoBehaviour
 {
+    [SerializeField] GameObject[] objectsToDisable;
+    public Transform end;
     public Planet[] planets;
     public TaskSystem taskSystem;
     //mercury   0
@@ -29,6 +31,10 @@ public class ShipController : MonoBehaviour
 
     public float maxFuel = 100f;
     public float currentFuel = 100f;
+
+    public bool endgame = false;
+
+    public GameObject endGameGUI;
 
     private void Start()
     {
@@ -72,8 +78,11 @@ public class ShipController : MonoBehaviour
         if (orbit)
         {
             transform.RotateAround(targetPlanet.position, Vector3.up, orbitSpeed * Time.deltaTime);
-            transform.rotation = Quaternion.Euler(0, targetPlanet.rotation.y, 0);
         }
+
+        if (endgame)
+            EndGame();
+
     }
 
     public void SetTrarget(Transform target)
@@ -132,6 +141,20 @@ public class ShipController : MonoBehaviour
         return false;
     }
 
+    public void EndGame()
+    {
+        
+        trailRenderer.enabled = true;
+        percentage = 0f;
+        transform.position = new Vector3(Mathf.Lerp(transform.position.x, end.position.x, Time.deltaTime), 0, Mathf.Lerp(transform.position.z, end.position.z, Time.deltaTime));
+
+        for (int i = 0; i <= 4; i++)
+        {
+            objectsToDisable[i].SetActive(false);
+        }
+
+        endGameGUI.SetActive(true);
+    }
    
 
 }

@@ -38,6 +38,11 @@ public class GUI : MonoBehaviour
 
     void Update()
     {
+        if(gold >= 4999.5f)
+        {
+            shipController.EndGame();
+        }
+
         //Fuel
         fuel = Mathf.Lerp(fuel, newFuel, 5 * Time.deltaTime);
         fuelText.text = "FUEL: " + fuel.ToString("0.00");
