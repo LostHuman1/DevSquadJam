@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ShipController : MonoBehaviour
 {
+    [SerializeField] AudioSource shipMovement;
     [SerializeField] GameObject[] objectsToDisable;
     public Transform end;
     public Planet[] planets;
@@ -97,6 +98,7 @@ public class ShipController : MonoBehaviour
                 transform.parent = target;
                 trailRenderer.enabled = true;
                 transform.localScale = new Vector3(0.2f / target.localScale.x, 0.2f / target.localScale.y, 0.2f / target.localScale.z);
+                shipMovement.Play();
             }  
         }   
     }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Comet : MonoBehaviour
 {
+    [SerializeField] AudioSource cometMovement;
     public Transform start;
     public Transform end;
     [SerializeField] float speed = 1;
@@ -14,6 +15,7 @@ public class Comet : MonoBehaviour
     {
         direction = end.position - start.position;
         StartCoroutine("Destruction");
+        cometMovement.Play();
     }
 
     IEnumerator Destruction()

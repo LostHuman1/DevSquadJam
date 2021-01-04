@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GUI : MonoBehaviour
 {
+    [SerializeField] AudioSource lowFuelSound;
+    [SerializeField] AudioSource taskCompletedSound;
     private ShipController shipController;
 
 
@@ -24,6 +26,8 @@ public class GUI : MonoBehaviour
 
     [SerializeField] private AudioCue buttonAudioCue;
     [SerializeField] private AudioManager audioManager;
+
+    bool lowFuel = true;
     void Start()
     {
 
@@ -49,10 +53,17 @@ public class GUI : MonoBehaviour
         if (fuel <= 100)
         {
             fuelText.color = Color.red;
+
+            if (lowFuel)
+            {
+                lowFuelSound.Play();
+            }
+            lowFuel = false;
         }
         else
         {
             fuelText.color = Color.white;
+            lowFuelSound.Stop();
         }
 
         gold = Mathf.Lerp(gold, newGold, 5 * Time.deltaTime);
@@ -120,5 +131,6 @@ public class GUI : MonoBehaviour
     public void AddGold(float value)
     {
         newGold += value;
+        taskCompletedSound.Play();
     }
 }
